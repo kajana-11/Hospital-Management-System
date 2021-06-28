@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <AnchorPane prefHeight="456.0" prefWidth="892.0" style="-fx-background-color: #74b9ff;">
+      <VBox layoutX="625.0" layoutY="43.0" prefHeight="164.0" prefWidth="58.0" spacing="25.0">
+         <Label text="ID" />
+         <Label text="Year" />
+         <Label text="Make" />
+         <Label text="Model" />
+      </VBox>
+      <VBox layoutX="691.0" layoutY="43.0" prefHeight="164.0" prefWidth="147.0" spacing="13.0">
+         <TextField fx:id="purpose_text" />
+         <TextField fx:id="name_text" />
+         <TextField fx:id="phone_text" />
+         <TextField fx:id="id_text" />
+      </VBox>
+      <TableView fx:id="main_table" layoutX="23.0" layoutY="34.0" onMouseClicked="#mouseClicked" prefHeight="387.0" prefWidth="576.0">
+         <columns>
+            <TableColumn fx:id="purpose_column" prefWidth="100.0" text="Purpose" />
+            <TableColumn fx:id="name_column" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="phone_column" prefWidth="100.0" text="Phone" />
+            <TableColumn fx:id="id_column" prefWidth="100.0" text="ID Card" />
+         </columns>
+      </TableView>
+      <Button fx:id="create_btn" layoutX="666.0" layoutY="232.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="27.0" prefWidth="112.0" text="Create" />
+      <Button fx:id="update_btn" layoutX="666.0" layoutY="280.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="27.0" prefWidth="112.0" text="Update" />
+      <Button fx:id="delete_btn" layoutX="666.0" layoutY="334.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="27.0" prefWidth="112.0" text="Delete" />
+      <TextField fx:id="get_text" layoutX="619.0" layoutY="386.0" prefHeight="27.0" prefWidth="128.0" promptText="Enter ID to GET data" />
+      <Button fx:id="get_button" layoutX="765.0" layoutY="386.0" mnemonicParsing="false" onAction="#buttonPressed" text="Get" />
+      <Button fx:id="revert_button" layoutX="811.0" layoutY="386.0" mnemonicParsing="false" onAction="#buttonPressed" text="Revert" />
+   </AnchorPane>
+</GridPane>
